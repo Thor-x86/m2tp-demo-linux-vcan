@@ -14,14 +14,11 @@ int main()
   m2tp_onConnected = &onConnected;
   m2tp_receivedListener = &onReceive;
   m2tp_onDisconnected = &onDisconnected;
-  m2tp_connectViaCAN("vcan1", 0, "m");
-
-  // Found bug here:
-  /* if (!m2tp_connectViaCAN("vcan1", 0, "m"))
+  if (!m2tp_connectViaCAN("vcan1", 0, "m"))
   {
     perror("Failed to connect via vcan1");
     return EXIT_FAILURE;
-  } */
+  }
 
   char buffer[253];
   while (true)
