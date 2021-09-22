@@ -17,11 +17,11 @@ make
 ## Run `leader` Side
 
 ```bash
-leader
+./leader
 ```
 
 ## Run `member` Side
 
 ```bash
-member
+./member
 ```
