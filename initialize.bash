@@ -26,5 +26,11 @@ sudo cangw -A -s vcan0 -d vcan1 -e
 # Connect vcan1 => vcan0
 sudo cangw -A -s vcan1 -d vcan0 -e
 
+# Making sure we can link the shared object
+if [ -z "$LD_LIBRARY_PATH" ]
+then
+  export LD_LIBRARY_PATH=/usr/local/lib
+fi
+
 echo "Done! Run this to list all available network adapters:"
 echo "ip link"
